@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material
+    container_name: mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docs:/docs
+    command: mkdocs serve -a 0.0.0.0:8000
+
+  # docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
