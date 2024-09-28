@@ -1,14 +1,34 @@
-# Oque é o Lab-Zone
+# Big Data Analitycs
 
-Lab-Zone é um projeto colaborativo desenvolvido pelo programadoresBR em parceria com a comunidade. Este projeto é dedicado à realização de workshops e seminários sobre uma ampla gama de tópicos relacionados à programação e tecnologia. O Lab-Zone tem como objetivo principal apresentar tecnologias emergentes e capacitar os membros ativos da nossa comunidade.
+## Oque é Big Data?
 
-Existem dois tipos de Lab-Zones:
+Big Data refere-se ao grande volume de dados, estruturados,semi-estruturados e não estruturados, que são gerados continuamente em diversas fontes, como redes sociais, dispositivos conectados (IoT), transações financeiras, sensores em tempo real,etc. Esses dados são gerados em grande velocidade, em diferentes formatos e de maneira massiva, tornando seu processamento e análise um desafio para métodos e ferramentas tradicionais.
 
-1. Lab-Zones Públicas: Abertas a todos os interessados, estas sessões proporcionam uma oportunidade para aprender sobre as últimas inovações e tendências tecnológicas. São eventos gratuitos, destinados a promover a inclusão e o acesso ao conhecimento.
+## os 5V's
 
-2. Lab-Zones Internas: Exclusivas para membros da comunidade ou parceiros selecionados, estas sessões oferecem um ambiente mais fechado para discussões aprofundadas e troca de conhecimentos específicos. São focadas em temas avançados e em capacitação técnica especializada.
-<br>
-## Como participar
+-Volume
+    -SQL (PostgreSQL,MYSQL,SQLserver)
+    -No-SQL (MongoDB, DocumentDB, DynamoDB)
+    -Data-Lake (AWS S3 e Azure Blob)
+    -Data-Warehouse (SnowFlake, AWS RedShift, Doris)
+    
+    -Open-format
+    -Data-LakeHouse
+    -Delta-Lake e Delta-LakeHouse
 
-Para participar de uma das diversas Lab-Zone é necessario entrar na nossa comunidade do discord, as datas estão disponiveis no 
+-Velocidade
+    -Processamento em Streams, Batch e micro-batch
 
+-Variedade
+    -Dado estruturado, não estruturado e semi-estruturado
+
+-Veracidade
+    -Manipulação de dados
+    -Governança de dados
+-Valor
+    -Data Vizz
+    -Machine Learning
+
+## Data ingestion
+    -ETL
+    -ELT
