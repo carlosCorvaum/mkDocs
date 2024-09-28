@@ -33,32 +33,30 @@ continuamente em diversas fontes, como redes sociais, dispositivos conectados (I
 em tempo real,etc. Esses dados são gerados em grande velocidade, em diferentes formatos e de maneira massiva, tornando
 seu processamento e análise um desafio para métodos e ferramentas tradicionais.
 
------
 
 ### Os 5V's
 
 <br>
 
 ## Volume
-    -SQL (PostgreSQL,MYSQL,SQLserver) e No-SQL (MongoDB, DocumentDB, DynamoDB)
-    -Data-Lake (AWS S3 e Azure Blob)
-    -Data-Warehouse (SnowFlake, AWS RedShift, Doris)
-    -Data-LakeHouse
-    -Delta-Lake e Delta-LakeHouse
+-SQL (PostgreSQL,MYSQL,SQLserver) e No-SQL (MongoDB, DocumentDB, DynamoDB)
+-Data-Lake (AWS S3 e Azure Blob)
+-Data-Warehouse (SnowFlake, AWS RedShift, Doris)
+-Data-LakeHouse
+-Delta-Lake e Delta-LakeHouse
 
 ## Velocidade
-    -Processamento em Streams, Batch e micro-batch
+-Processamento em Streams, Batch e micro-batch
 
 ## Variedade
-    -Dado estruturado, não estruturado e semi-estruturado
-    -
+-Dado estruturado, não estruturado e semi-estruturado
 
 ## Veracidade
-    -Manipulação de dados
-    -Governança de dados
+-Manipulação de dados
+-Governança de dados
 ## Valor
-    -Data Vizz
-    -Machine Learning
+-Data Vizz
+-Machine Learning
 
 -----
 ### Data ingestion
