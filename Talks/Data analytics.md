@@ -37,8 +37,6 @@ seu processamento e análise um desafio para métodos e ferramentas tradicionais
 
 ### Os 5V's
 
-<br>
-
 ## Volume
 SQL (PostgreSQL,MYSQL,SQLserver) e No-SQL (MongoDB, DocumentDB, DynamoDB)
 Data-Lake (AWS S3 e Azure Blob)
