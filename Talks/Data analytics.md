@@ -55,7 +55,7 @@ Manipulação de dados
 Governança de dados
 
 ## Valor
-Data Vizz
+Data Viz
 Machine Learning
 
 -----
