@@ -29,6 +29,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./site  # O diretório gerado pelo MkDocs
+          publish_dir: ./docs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token gerado automaticamente
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
