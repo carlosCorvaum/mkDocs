@@ -21,7 +21,7 @@ markdown_extensions:
 
 
 nav:
-  - index: index.md
+  - Inicio: index.md
   - Talks:
     - Como funciona: Talks/Como funciona.md
     - LOGS:
