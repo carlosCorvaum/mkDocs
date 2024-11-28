@@ -20,28 +20,23 @@ markdown_extensions:
 
 
 nav:
-  - Inicio:
-    - Bem-Vindo: Inicio/Bem vindo.md
-    - Sobre nos: Inicio/Sobre nos.md
-    - Projetos : Inicio/Projetos.md
-    - Commiters : Inicio/Commiters.md
-  
+  - Inicio: Inicio.md
+
   - Talks:
     - Como funciona: Talks/Como funciona.md
     - LOGS:
       - Data analitycs: Talks/Data analytics.md
       - AWS: Talks/AWS
       - Design patterns: Talks/Design patterns  
-  
+
   - Workshops:
     - Como funciona: Workshops/Como funciona.md
     - LOGS:
       - ETL: Workshops/ETL.md
       - DevSec: Workshops/DevSec.md
       - Design patterns: Workshops/Design patterns.md
-
-  - Colaboradores : Colaboradores.md
-  - Commit : Commit.md
+  - Calendario : Calendario.md
+  - Commits : Commit.md
 
 extra:
   social:
