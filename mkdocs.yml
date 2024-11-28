@@ -1,4 +1,5 @@
 site_name: CCDC docs
+site_url: https://carloscorvaum.github.io/mkDocs/
 theme:
   name: material
   
