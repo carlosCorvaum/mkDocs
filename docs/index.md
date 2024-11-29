@@ -34,4 +34,4 @@ loremloremloremtralha
 Nossa comunidade foi criada para que pessoas apaixonadas por tecnologia** possam se conectar, aprender e crescer juntas,aqui é onde as ideias se encontram e a colaboração se torna a base para o desenvolvimento de soluções inovadoras e transformadoras. Acreditamos que, ao compartilharmos nossos conhecimentos e experiências de forma sincera, podemos criar um ambiente de apoio e inspiração, gerando impactos positivos tanto em projetos quanto na vida de cada um de nós.
 
 ### **Convidamos você a fazer parte dessa jornada!**
-Participe, compartilhe seu conhecimento e conecte-se com outros apaixonados por tecnologia, (NÃO VAMOS TE VENDER UM CURSO!!)
+Participe, compartilhe seu conhecimento e conecte-se com outros apaixonados por tecnologia, (NÃO VAMOS TE VENDER UM CURSO!!).
