@@ -25,7 +25,7 @@ nav:
   - Talks:
     - Como funciona: Talks/Como funciona.md
     - LOGS:
-      - Data analitycs: Talks/Data analytics.md
+      - Data analitycs: Talks/Big Data.md
       - AWS: Talks/AWS
       - Design patterns: Talks/Design patterns  
 
