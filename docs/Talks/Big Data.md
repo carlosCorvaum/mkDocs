@@ -51,8 +51,7 @@ Claro, talvez para um mercado ou nicho específico cada dado tenha seu valor. Ma
 
 ### Data Lake x Data WareHouse x Data LakeHouse
 
-Imagem:
-https://www.databricks.com/wp-content/uploads/2020/01/data-lakehouse-new.png
+![](docs/imgs/BigData1.png)
 
 Data Lake
 
