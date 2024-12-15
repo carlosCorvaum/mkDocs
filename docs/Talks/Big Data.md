@@ -1,5 +1,3 @@
-Fontes: https://www.databricks.com/br/glossary/data-lakehouse[https://viniciusgribas.medium.com/arquitetura-de-dados-o-lakehouse-como-ferramenta-de-armazenamento-de-dados-d7ce87ddd92](https://viniciusgribas.medium.com/arquitetura-de-dados-o-lakehouse-como-ferramenta-de-armazenamento-de-dados-d7ce87ddd922)
-
 **Introdução**
 
 Nos dias de hoje, as empresas estão imersas em um mar de informações. Com a evolução da tecnologia e a digitalização dos processos, a quantidade de dados gerados diariamente é imensa. É nesse contexto que surge o conceito de Big Data. Este termo refere-se a conjuntos de dados vastos e complexos que não podem ser analisados por métodos tradicionais. A capacidade de coletar, armazenar, analisar e disponibilizar esses dados tornou-se uma vantagem competitiva crucial para as organizações que buscam entender melhor seu mercado, clientes e operações.
