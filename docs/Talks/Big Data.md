@@ -14,16 +14,18 @@ Estes três campos trabalham em conjunto para transformar grandes volumes de dad
 
 ## 5 V’s de Big Data
 
-Os 5 V’s de Big Data são o fundamento da tecnologia. Neles circulam os principais desafios e oportunidades que a análise de grandes volumes de dados pode proporcionar para a melhoria da **visualização e dos processos decisórios**. 🚀
+Os 5 V’s de Big Data são o fundamento da tecnologia. Neles circulam os principais desafios e
+<br>oportunidades que a análise de grandes volumes de dados pode proporcionar para a melhoria da 
+visualização e dos processos decisórios. 🚀
 
 ### Variedade
 
 A variedade do Big Data vem principalmente das suas diversas fontes, o que garante aos dados formatos variados, estruturas distintas e até mesmo informações diferentes que cada um deles oferece. Tratando-se das fontes, por exemplo:
 
-- Bancos de dados.
+- Bancos de dados;
 - E-mails;
 - Cookies de sites;
-- *Internet Of Things* – Internet das Coisas – IoT e os diversos dispositivos conectados;
+- Internet Of Things
 
 Tudo isso são fontes para Big Data e traduzem a variedade que esses dados podem ter. Além de diversidade das fontes, os dados do Big Data também variam de acordo com a natureza do arquivo, como imagens, vídeos, textos, entre inúmeros outros formatos. Tudo isso são dados a serem analisados por profissionais e empresas especialistas no assunto.
 
@@ -39,7 +41,7 @@ A veracidade é a real procedência dessas informações e ditam se são confiá
 
 ### Volume
 
-Big Data só faz sentido porque é extremamente volumoso. Hoje a quantidade de dados armazenados na internet [chega a 4,4 Zettabytes](https://forbes.com.br/sem-categoria/2015/10/20-fatos-sobre-a-internet-que-voce-provavelmente-nao-sabe/#:~:text=A%20quantidade%20de%20dados%20armazenados,n%C3%B3s%20criamos%20um%20novo%20dado.), que são equivalentes a 44 trilhões de Gigabytes, um número até difícil de compreender.
+Big Data só faz sentido porque é extremamente volumoso. Hoje a quantidade de dados armazenados na internet chega a 4,4 Zettabytes, que são equivalentes a 44 trilhões de Gigabytes, um número até difícil de compreender.
 
 E nada indica que a produção de dados irá desacelerar nos próximos anos. Ao contrário, a cada segundo a humanidade produz pelo menos mais um byte de dado a ser acrescentado nesse montante. Essa é mais uma razão para que o Big Data seja tão complexo, pois, por mais que existam informações de qualidade escondidas nos dados, é preciso saber encontrá-las e separá-las de dados irrelevantes para determinadas empresas.
 
@@ -51,9 +53,7 @@ Claro, talvez para um mercado ou nicho específico cada dado tenha seu valor. Ma
 
 ### Data Lake x Data WareHouse x Data LakeHouse
 
-![](docs/imgs/BigData1.png)
-
-Data Lake
+![](../imgs/BigData1.png){ align=left }
 
 ### 1. **Data Lake: A Piscina de Bolinhas Variadas**
 
@@ -95,7 +95,7 @@ Data Lake
 
 A **Hierarquia de Maslow Aplicada a Dados** é um modelo que adapta o conceito clássico da Pirâmide de Maslow ao contexto de ciência de dados, demonstrando as etapas essenciais para a maturidade no gerenciamento e uso de dados em organizações. A pirâmide apresenta cinco níveis hierárquicos, cada um representando um estágio de evolução no uso e exploração de dados.
 
-![pyramid.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/e49ebc6b-cf94-427e-b95f-6adcfb918066/816dc2d9-684f-48be-8f18-ecb4f55867f8/pyramid.jpg)
+![](../imgs/BigData2.jpg){ align=left }
 
 ## 1. Coleta
 
