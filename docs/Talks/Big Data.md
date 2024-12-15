@@ -6,9 +6,10 @@ Nos dias de hoje, as empresas estão imersas em um mar de informações. Com a e
 
 Modern Data Team
 
-- **Análise de Dados:** Envolve a exploração e interpretação de dados para extrair insights úteis para o negócio. Analistas de dados usam ferramentas estatísticas e de visualização para transformar dados brutos em informações acionáveis.
-- **Ciência de Dados:** Combina habilidades de programação, estatística e conhecimento de domínio para criar modelos preditivos e descritivos. Cientistas de dados frequentemente trabalham com aprendizado de máquina e inteligência artificial para descobrir padrões complexos nos dados.
 - **Engenharia de Dados:** Foca na construção e manutenção de sistemas e infraestruturas para coletar, armazenar e processar grandes volumes de dados. Engenheiros de dados trabalham com tecnologias como data lakes, data warehouses e pipelines de dados.
+- **Análise de Dados:** Envolve a exploração e interpretação de dados para extrair insights úteis para o negócio. Analistas de dados usam ferramentas estatísticas e de visualização para transformar dados brutos em informações acionáveis.
+- **Ciência de Dados:** Combina habilidades de programação, algoritmos matemáticos e conhecimento de domínio para criar modelos preditivos e descritivos. Cientistas de dados utilizam aprendizado de máquina e inteligência artificial para identificar padrões complexos nos dados e gerar insights acionáveis
+- **MLOps**: Integra algoritmos matemáticos com habilidades de programação e práticas de DevOps para operacionalizar modelos de aprendizado de máquina. Profissionais de MLOps automatizam o ciclo de vida dos modelos, garantindo sua implantação, monitoramento, versionamento e escalabilidade em produção, com foco em performance, confiabilidade e governança.
 
 Estes três campos trabalham em conjunto para transformar grandes volumes de dados em valor para as organizações, permitindo uma tomada de decisão mais informada e estratégica.
 
