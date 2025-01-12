@@ -8,25 +8,6 @@ A colaboração entre diferentes áreas da tecnologia cria um ambiente dinâmico
 
 # **Áreas de Atuação**
 
-loremloremloremtralha
-
-### **Data**
-- **Engenharia** e **análise** de dados, **MLOps** e **Data Science**.
-
-### **Segurança**
-- **Integração contínua de segurança** no ciclo de desenvolvimento e operações.
-
-### **DevSecOps & Segurança**
-- **Integração de segurança** no ciclo de desenvolvimento, operações e infraestrutura, garantindo **estabilidade** e **proteção** de sistemas.
-
-### **Back-End Development**
-- Desenvolvimento de **APIs**, **microserviços** e arquiteturas escaláveis com foco em **desempenho** e **confiabilidade**.
-
-### **Code Quality, Design Patterns & Frameworks**
-- **Melhoria de qualidade do código** por meio de boas práticas, **padrões de design** e uso de **frameworks modernos**.
-
-### **Cloud**
-- **Soluções na nuvem**, **escalabilidade** e **alta disponibilidade**.
 
 ---
 # **Nosso Propósito**
