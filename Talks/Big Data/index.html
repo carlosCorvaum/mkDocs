@@ -1,0 +1,1322 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://carloscorvaum.github.io/mkDocs/Talks/Big%20Data/">
+      
+      
+        <link rel="prev" href="../Como%20funciona/">
+      
+      
+        <link rel="next" href="../../Workshops/Como%20funciona/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Big Data - CCDC docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-vs-de-big-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CCDC docs" class="md-header__button md-logo" aria-label="CCDC docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CCDC docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Big Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Como%20funciona/" class="md-tabs__link">
+          
+  
+  Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Workshops/Como%20funciona/" class="md-tabs__link">
+          
+  
+  Workshops
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Calendario/" class="md-tabs__link">
+        
+  
+    
+  
+  Calendario
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Commit/" class="md-tabs__link">
+        
+  
+    
+  
+  Commits
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CCDC docs" class="md-nav__button md-logo" aria-label="CCDC docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CCDC docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Talks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Talks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Como%20funciona/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como funciona
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    LOGS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            LOGS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Big Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Big Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5-vs-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 V’s de Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 V’s de Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variedade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variedade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#velocidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Velocidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veracidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veracidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lake-x-data-warehouse-x-data-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Lake x Data WareHouse x Data LakeHouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-data-lake-a-piscina-de-bolinhas-variadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Data Lake: A Piscina de Bolinhas Variadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-warehouse-a-sala-de-bolinhas-organizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Data Warehouse: A Sala de Bolinhas Organizadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-lakehouse-a-piscina-organizada-e-flexivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Lakehouse: A Piscina Organizada e Flexível
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarquia-de-maslow-aplicada-a-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarquia de Maslow Aplicada a Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarquia de Maslow Aplicada a Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Coleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-moverarmazenar" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mover/Armazenar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-explorartransformar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Explorar/Transformar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-agregacaorotulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Agregação/Rótulos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ai-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. AI &amp; Deep Learning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design patterns" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Workshops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Workshops/Como%20funciona/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como funciona
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    LOGS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            LOGS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Workshops/ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Workshops/DevSec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DevSec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Workshops/Design patterns.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Calendario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5-vs-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 V’s de Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 V’s de Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variedade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variedade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#velocidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Velocidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veracidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veracidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-lake-x-data-warehouse-x-data-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Lake x Data WareHouse x Data LakeHouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-data-lake-a-piscina-de-bolinhas-variadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Data Lake: A Piscina de Bolinhas Variadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-warehouse-a-sala-de-bolinhas-organizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Data Warehouse: A Sala de Bolinhas Organizadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-lakehouse-a-piscina-organizada-e-flexivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Lakehouse: A Piscina Organizada e Flexível
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarquia-de-maslow-aplicada-a-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarquia de Maslow Aplicada a Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarquia de Maslow Aplicada a Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Coleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-moverarmazenar" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mover/Armazenar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-explorartransformar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Explorar/Transformar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-agregacaorotulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Agregação/Rótulos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ai-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. AI &amp; Deep Learning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><strong>Introdução</strong></p>
+<p>Nos dias de hoje, as empresas estão imersas em um mar de informações. Com a evolução da tecnologia e a digitalização dos processos, a quantidade de dados gerados diariamente é imensa. É nesse contexto que surge o conceito de Big Data. Este termo refere-se a conjuntos de dados vastos e complexos que não podem ser analisados por métodos tradicionais. A capacidade de coletar, armazenar, analisar e disponibilizar esses dados tornou-se uma vantagem competitiva crucial para as organizações que buscam entender melhor seu mercado, clientes e operações.</p>
+<p>Modern Data Team</p>
+<ul>
+<li><strong>Engenharia de Dados:</strong> Foca na construção e manutenção de sistemas e infraestruturas para coletar, armazenar e processar grandes volumes de dados. Engenheiros de dados trabalham com tecnologias como data lakes, data warehouses e pipelines de dados.</li>
+<li><strong>Análise de Dados:</strong> Envolve a exploração e interpretação de dados para extrair insights úteis para o negócio. Analistas de dados usam ferramentas estatísticas e de visualização para transformar dados brutos em informações acionáveis.</li>
+<li><strong>Ciência de Dados:</strong> Combina habilidades de programação, algoritmos matemáticos e conhecimento de domínio para criar modelos preditivos e descritivos. Cientistas de dados utilizam aprendizado de máquina e inteligência artificial para identificar padrões complexos nos dados e gerar insights acionáveis</li>
+<li><strong>MLOps</strong>: Integra algoritmos matemáticos com habilidades de programação e práticas de DevOps para operacionalizar modelos de aprendizado de máquina. Profissionais de MLOps automatizam o ciclo de vida dos modelos, garantindo sua implantação, monitoramento, versionamento e escalabilidade em produção, com foco em performance, confiabilidade e governança.</li>
+</ul>
+<p>Estes três campos trabalham em conjunto para transformar grandes volumes de dados em valor para as organizações, permitindo uma tomada de decisão mais informada e estratégica.</p>
+<h2 id="5-vs-de-big-data">5 V’s de Big Data</h2>
+<p>Os 5 V’s de Big Data são o fundamento da tecnologia. Neles circulam os principais desafios e
+<br>oportunidades que a análise de grandes volumes de dados pode proporcionar para a melhoria da 
+visualização e dos processos decisórios. 🚀</p>
+<h3 id="variedade">Variedade</h3>
+<p>A variedade do Big Data vem principalmente das suas diversas fontes, o que garante aos dados formatos variados, estruturas distintas e até mesmo informações diferentes que cada um deles oferece. Tratando-se das fontes, por exemplo:</p>
+<ul>
+<li>Bancos de dados;</li>
+<li>E-mails;</li>
+<li>Cookies de sites;</li>
+<li>Internet Of Things</li>
+</ul>
+<p>Tudo isso são fontes para Big Data e traduzem a variedade que esses dados podem ter. Além de diversidade das fontes, os dados do Big Data também variam de acordo com a natureza do arquivo, como imagens, vídeos, textos, entre inúmeros outros formatos. Tudo isso são dados a serem analisados por profissionais e empresas especialistas no assunto.</p>
+<h3 id="velocidade">Velocidade</h3>
+<p>A velocidade é o principal limitador de acesso à tecnologia de Big Data. Essa é a razão que faz com que essa tecnologia seja acessível a pouquíssimas pessoas.</p>
+<p>Os dados disponíveis são tantos, e muitas vezes tão complexos, que é preciso muita velocidade de processamento para conseguir extrair informação útil deles.</p>
+<h3 id="veracidade">Veracidade</h3>
+<p>A veracidade é a real procedência dessas informações e ditam se são confiáveis ou não. Como a variedade desses dados é cada vez maior, essa preocupação está se provando relevante.</p>
+<h3 id="volume">Volume</h3>
+<p>Big Data só faz sentido porque é extremamente volumoso. Hoje a quantidade de dados armazenados na internet chega a 4,4 Zettabytes, que são equivalentes a 44 trilhões de Gigabytes, um número até difícil de compreender.</p>
+<p>E nada indica que a produção de dados irá desacelerar nos próximos anos. Ao contrário, a cada segundo a humanidade produz pelo menos mais um byte de dado a ser acrescentado nesse montante. Essa é mais uma razão para que o Big Data seja tão complexo, pois, por mais que existam informações de qualidade escondidas nos dados, é preciso saber encontrá-las e separá-las de dados irrelevantes para determinadas empresas.</p>
+<h3 id="valor">Valor</h3>
+<p>Hoje a internet está com tanto dado acumulado que, por mais que neles se escondam informações preciosíssimas, como um diamante em uma mina, para encontrá-los é necessário dispensar uma série de dados “inúteis”.</p>
+<p>Claro, talvez para um mercado ou nicho específico cada dado tenha seu valor. Mas em muitos casos, quando esse serviço é oferecido para uma empresa específica a maior parte dos dados é irrelevante e é necessário organizar aqueles que são importantes e separá-los para serem lidos e utilizados.</p>
+<h3 id="data-lake-x-data-warehouse-x-data-lakehouse">Data Lake x Data WareHouse x Data LakeHouse</h3>
+<p><img align="left" alt="" src="../../imgs/BigData1.png" /></p>
+<h3 id="1-data-lake-a-piscina-de-bolinhas-variadas">1. <strong>Data Lake: A Piscina de Bolinhas Variadas</strong></h3>
+<ul>
+<li>Imagine o Data Lake como uma grande piscina de bolinhas onde diferentes cores representam diferentes tipos de dados. Cada cor de bolinha indica um formato de dado específico:<ul>
+<li><strong>Bolinhas Azuis</strong>: Dados estruturados, em formato tabular</li>
+<li><strong>Bolinhas Vermelhas</strong>: Dados semi-estruturados, como JSONs e XMLs.</li>
+<li><strong>Bolinhas Amarelas</strong>: Dados não estruturados, como imagens, vídeos e textos brutos.</li>
+<li><strong>Bolinhas Verdes</strong>: Logs de sistemas e dados em tempo real que entram constantemente.</li>
+</ul>
+</li>
+<li>No Data Lake, todas essas bolinhas ficam juntas, sem organização específica. Isso oferece flexibilidade para armazenar qualquer tipo de dado sem a necessidade de transformá-lo antes. É uma solução ideal para armazenar grandes volumes de dados, permitindo que sejam acessados para processamento posteriormente.</li>
+<li><strong>Pontos positivos</strong>: Baixo custo e alta escalabilidade.</li>
+<li><strong>Desafios</strong>: Dificuldade em buscar e analisar rapidamente, já que as bolinhas estão desorganizadas e os dados podem se tornar um "Data Swamp" se não forem bem gerenciados.</li>
+</ul>
+<hr />
+<h3 id="2-data-warehouse-a-sala-de-bolinhas-organizadas">2. <strong>Data Warehouse: A Sala de Bolinhas Organizadas</strong></h3>
+<ul>
+<li>O Data Warehouse é como uma sala onde as bolinhas são organizadas em compartimentos específicos:<ul>
+<li><strong>Bolinhas Azuis</strong> (Dados estruturados) são colocadas em compartimentos próprios, prontas para consultas rápidas.</li>
+<li><strong>Bolinhas Vermelhas</strong> (Dados semi-estruturados)  são transformadas antes de serem guardadas, para que fiquem consistentes com o formato dos dados da sala.</li>
+<li><strong>Bolinhas Amarelas e Verdes</strong> (Dados não estruturados) podem ser ajustadas para que encaixem, ou até deixadas de fora se não tiverem utilidade para o propósito da sala.</li>
+</ul>
+</li>
+<li>Cada dado passa por um processo de transformação e estruturação antes de entrar no Data Warehouse. Isso garante que as consultas e os relatórios sejam rápidos e eficientes, pois os dados já estão organizados.</li>
+<li><strong>Pontos positivos</strong>: Alto desempenho em consultas e análises padronizadas; dados são consistentes e organizados.</li>
+<li><strong>Desafios</strong>: Menos flexível e mais caro; limita o armazenamento de dados não estruturados e semi-estruturados.</li>
+</ul>
+<hr />
+<h3 id="3-data-lakehouse-a-piscina-organizada-e-flexivel">3. <strong>Data Lakehouse: A Piscina Organizada e Flexível</strong></h3>
+<ul>
+<li>O Data Lakehouse é como uma piscina de bolinhas que une o melhor dos dois mundos: tem áreas desorganizadas como o Data Lake e áreas organizadas como o Data Warehouse:<ul>
+<li>Na área desorganizada, bolinhas de todas as cores podem ser jogadas sem passar por processos de transformação, como no Data Lake.</li>
+<li>Na área organizada, as bolinhas são separadas por cores e tipos, prontas para consultas rápidas, como no Data Warehouse.</li>
+<li>Ferramentas avançadas permitem mover rapidamente as bolinhas entre essas áreas, facilitando a análise rápida de dados, mesmo para aqueles que estão inicialmente na parte desorganizada.</li>
+</ul>
+</li>
+<li>
+<p>O Data Lakehouse, então, oferece flexibilidade para armazenar dados variados e ferramentas que otimizam o acesso e organização dos dados para análise, eliminando a necessidade de duplicar dados entre sistemas.</p>
+</li>
+<li>
+<p><strong>Pontos positivos</strong>: Combina flexibilidade e desempenho; reduz custos e elimina a duplicação de dados.</p>
+</li>
+<li><strong>Desafios</strong>: Como tecnologia mais nova, pode exigir uma infraestrutura mais avançada e uma gestão de dados sofisticada para funcionar de maneira eficaz.</li>
+</ul>
+<h1 id="hierarquia-de-maslow-aplicada-a-dados">Hierarquia de Maslow Aplicada a Dados</h1>
+<p>A <strong>Hierarquia de Maslow Aplicada a Dados</strong> é um modelo que adapta o conceito clássico da Pirâmide de Maslow ao contexto de ciência de dados, demonstrando as etapas essenciais para a maturidade no gerenciamento e uso de dados em organizações. A pirâmide apresenta cinco níveis hierárquicos, cada um representando um estágio de evolução no uso e exploração de dados.</p>
+<p><img align="left" alt="" src="../../imgs/BigData2.jpg" /></p>
+<h2 id="1-coleta">1. Coleta</h2>
+<p><strong>Base da pirâmide: Ingestão de Dados</strong></p>
+<p>Este é o primeiro passo, onde os dados são coletados a partir de diversas fontes, como logs, sensores, dados externos e conteúdo gerado por usuários. Esse processo é essencial para a criação de um fluxo contínuo de informações e para garantir que as organizações tenham acesso aos dados necessários para análise e tomada de decisão.</p>
+<ul>
+<li>Fontes de dados: sensores, logs, APIs, bancos de dados externos, etc.</li>
+<li>Objetivo: Capturar dados de maneira confiável e em escala.</li>
+</ul>
+<hr />
+<h2 id="2-moverarmazenar">2. Mover/Armazenar</h2>
+<p><strong>Infraestrutura e Fluxo de Dados</strong></p>
+<p>Após a coleta, os dados precisam ser transportados e armazenados de maneira eficiente. Este nível envolve a construção de pipelines robustos, processos de ETL (Extração, Transformação e Carga) e a criação de infraestruturas que suportem tanto dados estruturados quanto não estruturados.</p>
+<ul>
+<li>Componentes: pipelines, sistemas de armazenamento (Data Warehouses e Data Lakes), segurança de dados.</li>
+<li>Objetivo: Garantir que os dados estejam disponíveis e organizados para uso futuro.</li>
+</ul>
+<hr />
+<h2 id="3-explorartransformar">3. Explorar/Transformar</h2>
+<p><strong>Entendimento e Transformação de Dados</strong></p>
+<p>Neste estágio, os dados brutos são processados e transformados em informações úteis. Ferramentas analíticas e técnicas de detecção de anomalias ajudam as organizações a entenderem melhor os dados e a extraírem insights relevantes.</p>
+<ul>
+<li>Atividades: limpeza de dados, exploração, análise descritiva.</li>
+<li>Objetivo: Detectar padrões e preparar os dados para análises mais avançadas.</li>
+</ul>
+<hr />
+<h2 id="4-agregacaorotulos">4. Agregação/Rótulos</h2>
+<p><strong>Análises e Preparação de Dados para Treinamento</strong></p>
+<p>Os dados passam a ser agregados, rotulados e preparados para uso em modelos mais complexos. Aqui, métricas e recursos são criados para alimentar análises preditivas e algoritmos de aprendizado de máquina.</p>
+<ul>
+<li>Componentes: criação de segmentos, métricas, agregações, rótulos.</li>
+<li>Objetivo: Estruturar os dados para análises avançadas e Machine Learning.</li>
+</ul>
+<hr />
+<h2 id="5-ai-deep-learning">5. AI &amp; Deep Learning</h2>
+<p><strong>Topo da Pirâmide: Inteligência Artificial</strong></p>
+<p>No estágio mais avançado, os dados são usados para alimentar sistemas de inteligência artificial e aprendizado profundo (Deep Learning). Essa etapa representa o uso mais sofisticado dos dados, onde a tecnologia é empregada para criar modelos preditivos e prescritivos de alta complexidade.</p>
+<ul>
+<li>Aplicações: redes neurais, algoritmos de IA, automação de decisões.</li>
+<li>Objetivo: Maximizar o valor dos dados para criar vantagens competitivas.</li>
+</ul>
+<hr />
+<p>A <strong>Hierarquia de Maslow Aplicada a Dados</strong> fornece uma visão clara do caminho que as organizações devem percorrer para evoluir no uso de dados. Cada nível é essencial para o próximo, e o sucesso no topo depende de uma base sólida construída nos níveis inferiores</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Apoio de ProgramadoresBR
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/programacao" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485 485 0 0 0 404.081 32.03a1.82 1.82 0 0 0-1.923.91 338 338 0 0 0-14.9 30.6 447.9 447.9 0 0 0-134.426 0 310 310 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.7 483.7 0 0 0-119.688 37.107 1.7 1.7 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.02 2.02 0 0 0 .765 1.375 487.7 487.7 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348 348 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321 321 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251 251 0 0 0 9.109-7.137 1.82 1.82 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.81 1.81 0 0 1 1.924.233 235 235 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.4 301.4 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391 391 0 0 0 30.014 48.815 1.86 1.86 0 0 0 2.063.7A486 486 0 0 0 610.7 405.729a1.88 1.88 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541M222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241m195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
